@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>문자 보내기</title>
+  <script>
+    window.onload = function() {
+      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      // 아이폰, 아이패드
+      if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        window.location.href = "sms:01057967012&body=강력 히든주 7번";
+      } else {
+        // 안드로이드 및 기타
+        window.location.href = "sms:01057967012?body=강력 히든주 7번";
+      }
+    };
+  </script>
+</head>
+<body>
+  <p>문자 앱으로 이동 중... 이동되지 않으면 <a href="sms:01057967012?body=강력 히든주 7번">여기</a>를 클릭하세요.</p>
+</body>
+</html>
